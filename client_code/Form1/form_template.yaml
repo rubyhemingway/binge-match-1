@@ -4,11 +4,6 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
-- event_bindings: {click: sidebar_button_1_click}
-  layout_properties: {slot: left-nav}
-  name: sidebar_button_1
-  properties: {bold: true, italic: false, role: outlined-button, text: Netflix, underline: false}
-  type: Button
 - components: []
   data_bindings:
   - {code: 'self.item[''main_title'']', property: font, writeback: false}
@@ -16,6 +11,15 @@ components:
   name: main_title
   properties: {align: center, content: Binge Match!, font_size: 32, format: plain_text}
   type: RichText
+- components:
+  - layout_properties: {}
+    name: button_1
+    properties: {text: Netflix}
+    type: Button
+  layout_properties: {slot: default}
+  name: linear_panel_1
+  properties: {}
+  type: LinearPanel
 container:
   properties: {html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
