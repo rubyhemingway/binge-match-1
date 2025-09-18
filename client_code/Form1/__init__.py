@@ -7,6 +7,7 @@ class Form1(Form1Template):
   def button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
+    self.text_box_1.focus()
 
   def button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
