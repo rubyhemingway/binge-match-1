@@ -16,19 +16,32 @@ class Form1(Form1Template):
     pass
 
   def search_bar_pressed_enter(self, **event_args):
-    query = self.search_bar.text.strip().lower()
+    """This method is called when the user presses Enter in this text box"""
+    pass
 
+def search_bar_pressed_enter(self, **event_args):
+  """This method is called when the user presses Enter in this text box"""
+  query = self.search_bar.text.strip().lower()
   responses = {
-    "happy": "Brooklyn Nine-Nine",
-    "sad": "13 Reasons Why",
-    "exciting": ["Wednesday", "Bridgerton"]
-
+    "happy": {
+      "title": "Brooklyn Nine-Nine",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/8/8a/Brooklyn_Nine-Nine_season_1_DVD_cover.jpg"
+    },
+    "sad": {
+      "title": "13 Reasons Why",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/7/79/13_Reasons_Why_season_1.jpg"
+    },
+    "exciting": {
+      "title": "Wednesday & Bridgerton",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/7/7e/Wednesday_Netflix_poster.jpg"
+    }
   }
-result = responses.get(query, f"No recommendation for '{query}'")
-self.output_label.text = result
-"""This method is called when the user presses Enter in this text box"""
-pass
 
-
-
+  result = responses.get(query)
+  if result:
+    self.output_label.text = result["title"]
+    self.poster_image.source = result["poster"]
+  else:
+    self.output_label.text = f"No recommendation for '{query}'"
+    self.poster_image.source = None
 
