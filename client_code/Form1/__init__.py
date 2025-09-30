@@ -5,19 +5,22 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    def search_bar.visible = False
-
-  #focus to search bar
-  def outlined_button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    self.search_bar.focus()
-    pass
+    self.search_bar.visible = False
+    pass 
+    #anvil 'getting started' module helped build majority of this code
+    #when adding components, it inputs portions of the code, showing you where to put the following code
+    def outlined_button_1_click(self, **event_args):
+      """This method is called when the button is clicked"""
+    self.search_bar.visible = True #allow user to type in search bar
+   
   #search bar basic responses
+  #microsoft copilot helped with the formatting of this portion, along with in-class code conundrums done in Google Colab
   def search_bar_click(self, **event_args):
     pass
 
-  def search_bar_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.search_bar.focus()
     pass
 
 def search_bar_pressed_enter(self, **event_args):
@@ -37,7 +40,7 @@ def search_bar_pressed_enter(self, **event_args):
       "poster": "https://upload.wikimedia.org/wikipedia/en/7/7e/Wednesday_Netflix_poster.jpg"
     }
   }
-
+#Google Colab in-class acitivities helped majorly with this portion
   result = responses.get(query)
   if result:
     self.output_label.text = result["title"]
