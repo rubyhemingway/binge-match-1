@@ -18,15 +18,7 @@ components:
   name: main_title
   properties: {align: center, background: white, border: '#ff57e0', content: Binge Match!, font_size: 32, foreground: 'theme:On Secondary Container', format: plain_text}
   type: RichText
-- components:
-  - event_bindings: {click: outlined_button_1_click}
-    name: outlined_button_1
-    properties: {role: outlined-button, text: 🔎}
-    type: Button
-  - event_bindings: {pressed_enter: search_bar_pressed_enter}
-    name: search_bar
-    properties: {role: outlined, visible: false}
-    type: TextBox
+- components: []
   layout_properties: {slot: nav-right}
   name: flow_panel_1
   properties: {}
