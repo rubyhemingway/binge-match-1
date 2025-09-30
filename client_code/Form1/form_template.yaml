@@ -1,9 +1,4 @@
 components:
-- event_bindings: {click: outlined_button_1_click}
-  layout_properties: {slot: nav-right}
-  name: outlined_button_1
-  properties: {role: outlined-button, text: 🔎}
-  type: Button
 - layout_properties: {slot: left-nav}
   name: column_panel_1
   properties: {}
@@ -12,12 +7,7 @@ components:
   - name: label_1
     properties: {align: center, bold: true, font_size: 57, text: Find Your Perfect Match!}
     type: Label
-  - components:
-    - event_bindings: {pressed_enter: search_bar_pressed_enter}
-      layout_properties: {grid_position: 'FGKRLY,EMYIBR'}
-      name: search_bar
-      properties: {role: outlined}
-      type: TextBox
+  - components: []
     name: outlined_card_1
     properties: {role: outlined-card}
     type: ColumnPanel
@@ -26,6 +16,16 @@ components:
   name: main_title
   properties: {align: center, background: white, border: '#ff57e0', content: Binge Match!, font_size: 32, foreground: 'theme:On Secondary Container', format: plain_text}
   type: RichText
+- event_bindings: {click: outlined_button_1_click}
+  layout_properties: {slot: title}
+  name: outlined_button_1
+  properties: {role: outlined-button, text: 🔎}
+  type: Button
+- event_bindings: {pressed_enter: search_bar_pressed_enter}
+  layout_properties: {slot: nav-right}
+  name: search_bar
+  properties: {role: outlined, visible: true}
+  type: TextBox
 container:
   properties: {background: white, html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
