@@ -6,23 +6,29 @@ class netflixpage(netflixpageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def outlined_button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    self.media_data = [
+      {"title": "Happy Days", "type": "show"},
+      {"title": "Happiest Season", "type": "movie"},
+      {"title": "Happy Endings", "type": "show"},
+      {"title": "Happy Place", "type": "movie"},
+      {"title": "The Office", "type": "show"},
+      {"title": "Inception", "type": "movie"},
+      {"title": "Stranger Things", "type": "show"},
+    ]
+    self.repeating_panel_1.visible = False
 
   def search_bar_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
+    search_term = self.search_bar.text.lower()
+
+    if len(search_term) > 0:
+      matches = [item for item in self.media_data 
+                 if search_term in item['title'].lower()]
+
+      self.repeating_panel_1.items = matches
+      self.repeating_panel_1.visible = len(matches) > 0
+    else:
+      self.repeating_panel_1.visible = False
+
+  def repeating_panel_1_hide(self, **event_args):
+    """This method is called when the repeating panel is removed from the screen"""
     pass
-
-  def drop_down_1_change(self, **event_args):
-    """This method is called when an item is selected"""
-    pass
-
-def recommendations(self, **event_args):
-  self.recommendations = {
-    "happy": ["Brooklyn Nine-Nine", "Ted Lasso", "Parks and Rec"],
-    "sad": ["BoJack Horseman", "13 Reasons Why", "This Is Us"],
-    "excited": ["Stranger Things", "Money Heist", "Wednesday"],
-    "romantic": ["Bridgerton", "Outlander", "Heartstopper"]
-  }
-

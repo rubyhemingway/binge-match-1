@@ -10,6 +10,11 @@ components:
     name: search_bar
     properties: {background: white, foreground: '', text: ''}
     type: TextBox
+  - event_bindings: {hide: repeating_panel_1_hide}
+    layout_properties: {grid_position: 'DLIYWM,RLUAFO'}
+    name: repeating_panel_1
+    properties: {item_template: netflixpage.ItemTemplate2}
+    type: RepeatingPanel
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
