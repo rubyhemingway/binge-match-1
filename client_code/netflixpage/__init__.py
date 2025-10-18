@@ -7,7 +7,7 @@ class netflixpage(netflixpageTemplate):
     self.init_components(**properties)
 
     self.media_data = [
-      {"title": "Happy Days", "type": "show"},
+      {"title": "Happy", "type": "show"},
       {"title": "Happiest Season", "type": "movie"},
       {"title": "Happy Endings", "type": "show"},
       {"title": "Happy Place", "type": "movie"},
@@ -32,3 +32,9 @@ class netflixpage(netflixpageTemplate):
   def repeating_panel_1_hide(self, **event_args):
     """This method is called when the repeating panel is removed from the screen"""
     pass
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.search_bar.focus()
+    pass
+

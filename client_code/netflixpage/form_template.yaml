@@ -28,7 +28,8 @@ components:
   properties: {text: NETFLIX}
   type: Label
 - components:
-  - layout_properties: {grid_position: 'TFWRTM,VQJSCP'}
+  - event_bindings: {click: outlined_button_2_click}
+    layout_properties: {grid_position: 'TFWRTM,VQJSCP'}
     name: outlined_button_2
     properties: {role: outlined-button, text: netflix}
     type: Button
