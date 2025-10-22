@@ -12,3 +12,11 @@ class homepage(homepageTemplate):
     """This method is called when the button is clicked"""
     open_form('netflixpage')
 
+  def home_button_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  
+
+
+

@@ -23,10 +23,11 @@ components:
   name: flow_panel_1
   properties: {}
   type: FlowPanel
-- layout_properties: {slot: title}
-  name: title_one
-  properties: {text: TV Show & Movie Recommendations}
-  type: Label
+- event_bindings: {click: home_button_click}
+  layout_properties: {slot: title}
+  name: home_button
+  properties: {text: Binge Match!}
+  type: Button
 container:
   properties: {background: white, html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
