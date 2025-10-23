@@ -3,6 +3,7 @@ unique_ids:
     BrandAssets_Logos_01-Wordmark.jpg: '1758000516204131791715997.78105'
     _ (10).jpeg: '175739431853059327193688.87351'
     download.png: '1758000545949358939144801.9422'
+    happyfeet titlepage.jpeg: '1761196236111571384661784.7482'
     standard-page.html: 2MBXTMJLFIZ2I42HRKO3LFARLEWKNFB2
     theme.css: GI2KFPVFCQBLXFVO3KGUY2WADQUXTMMH
   forms:
@@ -10,6 +11,7 @@ unique_ids:
     homepage.ItemTemplate1: '1759136163527917722360792.1666'
     netflixpage: '1759207871487414594779124.54956'
     netflixpage.ItemTemplate2: '1760779217581838830127684.8699'
+    netflixpage.happyfeet: '1761195707199545921251661.88666'
   modules: {}
   scripts: {}
   server_modules: {}

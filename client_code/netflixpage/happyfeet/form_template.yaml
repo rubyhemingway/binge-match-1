@@ -1,0 +1,76 @@
+components:
+- components:
+  - components:
+    - layout_properties: {width: 280.82075}
+      name: image_1
+      properties: {height: 318.10546875, source: _/theme/happyfeet titlepage.jpeg}
+      type: Image
+    - components:
+      - layout_properties: {}
+        name: label_1
+        properties: {text: 'Title: ''Happy Feet'''}
+        type: Label
+      - layout_properties: {}
+        name: label_2
+        properties: {text: 'Release Date: 2006 '}
+        type: Label
+      - layout_properties: {}
+        name: label_3
+        properties: {text: 'Content:'}
+        type: Label
+      - layout_properties: {}
+        name: label_4
+        properties: {text: '''Happy Feet'' is a musical-comedy, directed by George Miller. It follows the story of penguins who find their soulmate through song. However, the movie follows the story of ''Mumble'' a penguin who cannot sing but choses dance instead. Landing him in some troubles, which bring to light the human intervention of fishing in their waters.'}
+        type: Label
+      layout_properties: {width: 238.46484375}
+      name: linear_panel_1
+      properties: {}
+      type: LinearPanel
+    layout_properties: {grid_position: 'MTSBBY,ELKQPE'}
+    name: flow_panel_1
+    properties: {}
+    type: FlowPanel
+  - layout_properties: {grid_position: 'KMGVIE,PROTBN'}
+    name: label_5
+    properties: {text: 'Watch if:'}
+    type: Label
+  - layout_properties: {grid_position: 'FKRCYL,DMFALZ'}
+    name: label_6
+    properties: {text: 'You''re feeling lighthearted, happy or joyful. It is a movie full of joy, although there are some disheartening scenes during the movie''s complications. But do not fear! This is a movie with a happy ending. 🐧'}
+    type: Label
+  - event_bindings: {click: outlined_button_2_click}
+    layout_properties: {grid_position: 'JKDOMF,JQGNEB'}
+    name: outlined_button_2
+    properties: {role: outlined-button, text: Write a Review!}
+    type: Button
+  - event_bindings: {pressed_enter: reviewbox_1_pressed_enter}
+    layout_properties: {grid_position: 'ZNAZMV,OJQDQO'}
+    name: reviewbox_1
+    properties: {role: outlined}
+    type: TextBox
+  - layout_properties: {grid_position: 'RXQCGP,MCWGPE'}
+    name: output_label
+    properties: {}
+    type: Label
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- event_bindings: {click: outlined_button_1_click}
+  layout_properties: {slot: left-nav}
+  name: outlined_button_1
+  properties: {role: outlined-button, text: Netflix}
+  type: Button
+- event_bindings: {click: button_1_click}
+  layout_properties: {slot: title}
+  name: button_1
+  properties: {text: Binge Match!}
+  type: Button
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
