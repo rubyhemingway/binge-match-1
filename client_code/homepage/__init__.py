@@ -8,6 +8,8 @@ class homepage(homepageTemplate):
 
 # the 'open form' function is made to add pages into the site, to make the screens change.
 # I learnt how to do that from a tutorial in anvil.
+# the 'form' template is what has been used to format this site.
+# recommended by anvil.
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('netflixpage')
