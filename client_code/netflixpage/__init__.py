@@ -25,31 +25,32 @@ class netflixpage(netflixpageTemplate):
       matches = [item for item in self.media_data 
                  if search_term in item['title'].lower()]
 
-    # the code which tells the repeating panel what to do.
-    # telling the panel to only show if there is a match to what the user is searching.
+      # the code which tells the repeating panel what to do.
+      # telling the panel to only show if there is a match to what the user is searching.
       self.repeating_panel_1.items = matches
       self.repeating_panel_1.visible = len(matches) > 0
     else:
       self.repeating_panel_1.visible = False
 
-def home_button01_click(self, **event_args):
-  """This method is called when the button is clicked"""
-  open_form ('homepage')
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.search_bar.focus()
 
-def outlined_button_2_click(self, **event_args):
-  """This method is called when the button is clicked"""
-  open_form('netflixpage')
+  # hides the repeating panel from view when running the site.
+  # unless the user hits enter in the search bar, then it appears.
+  def repeating_panel_1_hide(self, **event_args):
+    """This method is called when the repeating panel is removed from the screen"""
+    pass
 
-# hides the repeating panel from view when running the site.
-# unless the user hits enter in the search bar, then it appears.
-def repeating_panel_1_hide(self, **event_args):
-  """This method is called when the repeating panel is removed from the screen"""
-  pass
+  def home_button01_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form ('homepage')
 
-# makes the users mouse focus to the search bar
-def outlined_button_1_click(self, **event_args):
-  """This method is called when the button is clicked"""
-  self.search_bar.focus()
-  pass
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('netflixpage')
+
+
+
 
 

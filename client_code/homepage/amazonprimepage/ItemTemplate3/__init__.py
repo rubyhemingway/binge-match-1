@@ -16,7 +16,7 @@ class ItemTemplate3(ItemTemplate3Template):
     title = self.item['title'].lower().replace(" ", "").replace("'", "")
     form_name = f"amazonprimepage.{title}"
     try:
-      open_form(form_name)
+      open_form(theoffice)
     except Exception:
       alert(f"No form found for '{self.item['title']}'")
 
