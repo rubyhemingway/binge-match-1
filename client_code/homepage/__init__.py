@@ -18,6 +18,10 @@ class homepage(homepageTemplate):
     """This method is called when the button is clicked"""
     pass
 
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('homepage.amazonprimepage')
+
   
 
 

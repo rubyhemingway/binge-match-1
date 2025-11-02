@@ -22,7 +22,7 @@ class happyfeet(happyfeetTemplate):
     """This method is called when the button is clicked"""
     self.reviewbox_1.focus()
 
-# allows the user to write a review which gets posted on the site.
+# allows the user to write a review which gets posted on the site so other users can see it.
   def reviewbox_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     user_input = self.reviewbox_1.text.strip()

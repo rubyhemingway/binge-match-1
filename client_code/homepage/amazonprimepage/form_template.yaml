@@ -1,0 +1,18 @@
+components:
+- layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- event_bindings: {click: button_1_click}
+  layout_properties: {slot: title}
+  name: button_1
+  properties: {text: Binge Match!}
+  type: Button
+container:
+  properties: {html: '@theme:standard-page.html', visible: true}
+  type: HtmlTemplate
+is_package: true
