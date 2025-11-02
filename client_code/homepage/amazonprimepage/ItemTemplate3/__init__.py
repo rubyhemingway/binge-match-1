@@ -11,12 +11,9 @@ class ItemTemplate3(ItemTemplate3Template):
     self.button_2.text = self.item['title']  # Set button text to the title
 
   def button_2_click(self, **event_args):
-    """Open a form based on the title"""
-    # this ensures the output of the titles will match any forms created after the fact which link to the repeating panel.
-    title = self.item['title'].lower().replace(" ", "").replace("'", "")
-    form_name = f"amazonprimepage.{title}"
-    try:
-      open_form(theoffice)
-    except Exception:
-      alert(f"No form found for '{self.item['title']}'")
+    """This method is called when the button is clicked"""
+    open_form('homepage.amazonprimepage.theoffice')
+
+  
+    
 
