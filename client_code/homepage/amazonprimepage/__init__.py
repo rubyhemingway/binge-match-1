@@ -28,26 +28,29 @@ class amazonprimepage(amazonprimepageTemplate):
 
 # takes the user to the netflix page
   def outlined_button_1_click(self, **event_args):
-    """Go to Netflix page"""
+    """This method is called when the button is clicked"""
     open_form('netflixpage')
 
 # reloads the amazon prime page
   def outlined_button_2_click(self, **event_args):
-    """Reload Amazon Prime page"""
+    """This method is called when the button is clicked"""
     open_form('amazonprimepage')
 
+#focuses the users mouse to the search bar, showing that they can type in it.
   def outlined_button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.search_bar_2.focus()
     pass
 
+  # when the user hits enter the repeating panel becomes visible.
   def search_bar_2_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
-    """Triggered when user presses Enter in the search bar"""
     search_term = self.search_bar_2.text.lower()
 
+    # this means if the length of the input is greater than 0, making the repeating panel become visible.
     if len(search_term) > 0:
-      # Filter for shows that include the search term in their tags
+      # the code which produces an output based on the tags written in the data code.
+      # an example being, 'funny', 'simple', 'sit-com'
       matches = [item for item in self.media_data
                  if item['type'] == 'show' and search_term in item['tags']]
       self.repeating_panel_1.items = matches

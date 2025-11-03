@@ -6,6 +6,8 @@ class netflixpage(netflixpageTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    # this is the data for the repeating panel.
+    # if I was able to get access to API's for streaming platforms the information would go here.
     self.media_data = [
       {"title": "Happy Feet", "type": "show"},
       {"title": "Happiest Season", "type": "movie"},
@@ -15,7 +17,6 @@ class netflixpage(netflixpageTemplate):
     self.repeating_panel_1.visible = False
 
   # this is the code for when the user presses enter, making the repeating panel drop down
-
   def search_bar_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     search_term = self.search_bar.text.lower()
@@ -32,6 +33,7 @@ class netflixpage(netflixpageTemplate):
     else:
       self.repeating_panel_1.visible = False
 
+  # highlights the search bar for the user.
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.search_bar.focus()
@@ -42,10 +44,12 @@ class netflixpage(netflixpageTemplate):
     """This method is called when the repeating panel is removed from the screen"""
     pass
 
+  # takes the user back to the homepage.
   def home_button01_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form ('homepage')
 
+  # reloads the netflix page.
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('netflixpage')
