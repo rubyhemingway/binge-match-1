@@ -9,11 +9,12 @@ class amazonprimepage(amazonprimepageTemplate):
     # the following code after the title is telling the code to respond to keywords not the title.
     # used the same method applied to the netflix page, however it took more effort and time because figuring out how to make it respond to keywords took so much research.
     self.media_data = [
-      {"title": "The Office", "type": "show", "tags": ["funny"]},
-      {"title": "South Park", "type": "show", "tags": ["funny"]},
-      {"title": "Clarkson's Farm", "type": "show", "tags": ["funny"]},
+      {"title": "The Office", "type": "show", "tags": ["funny", "comedy", "sit-com"]},
+      {"title": "South Park", "type": "show", "tags": ["funny", "comedy"]},
+      {"title": "Clarkson's Farm", "type": "show", "tags": ["funny", "comedy"]},
       {"title": "The Boys", "type": "show", "tags": ["action", "dark"]},
       {"title": "Fleabag", "type": "show", "tags": ["funny", "drama"]},
+      {"title": "Top Gear", "type": "show", "tags": ["funny", "cars", "simple"]},
     ]
 
     # this is the code to hide the repeating panel
