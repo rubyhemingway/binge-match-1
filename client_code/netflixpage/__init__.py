@@ -21,7 +21,8 @@ class netflixpage(netflixpageTemplate):
     self.repeating_panel_1.visible = False
 
   # this is the code for when the user presses enter, making the repeating panel drop down.
-  # by using anvils 'prewritten' code function when writing in the code, I
+  # by using anvils 'prewritten' code function when writing in the code i was able to write these lines.
+  # functions video on Canvas, was helpful for this part of the code. (reference in master reference list)
   def search_bar_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     search_term = self.search_bar.text.lower()
@@ -29,13 +30,14 @@ class netflixpage(netflixpageTemplate):
     # the code which informs the site to show the list of movie titles.
     # co-pilot was also needed for this portion (tutor is aware), along with some in-class activites.
     # however, once this small portion of code was understood the anvil 'Get Started' module was enough for me to delve deeper with my code.
-    # also, the Python (conditionals) video on Canvas was helpful, I just needed to adapt it to anvil.
+    # also, the Python (conditionals) video on Canvas was helpful, I just needed to adapt it to anvil (reference in master reference list)
     if len(search_term) > 0:
       matches = [item for item in self.media_data 
                  if search_term in item['title'].lower()]
 
       # the code which tells the repeating panel what to do.
       # telling the panel to only show if there is a match to what the user is searching.
+      # conditionals python video on Canvas was used for this portion. along with anvils prewritten code which pops up when you begin typing. (reference in master reference list)
       self.repeating_panel_1.items = matches
       self.repeating_panel_1.visible = len(matches) > 0
     else:
@@ -43,6 +45,7 @@ class netflixpage(netflixpageTemplate):
 
   # highlights the search bar for the user.
   # imported from anvil.
+  # functions video on Canvas, was helpful for this part of the code. (reference in master reference list)
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.search_bar.focus()

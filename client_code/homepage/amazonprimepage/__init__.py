@@ -54,6 +54,7 @@ class amazonprimepage(amazonprimepageTemplate):
 
   # when the user hits enter the repeating panel becomes visible.
   # imported from anvil.
+  # functions video on Canvas, was helpful for this part of the code. (reference in master reference list)
   def search_bar_2_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     search_term = self.search_bar_2.text.lower()
@@ -61,7 +62,7 @@ class amazonprimepage(amazonprimepageTemplate):
     # this means if the length of the input is greater than 0, making the repeating panel become visible.
     # co-pilot was also needed for this portion (tutor is aware), along with some in-class activites.
     # however, once this small portion of code was understood the anvil 'Get Started' module was enough for me to delve deeper with my code.
-    # also, the Python (conditionals) video on Canvas was helpful, I just needed to adapt it to anvil.
+    # also, the Python (conditionals) video on Canvas was helpful, I just needed to adapt it to anvil. (reference in master reference list)
     if len(search_term) > 0:
       # the code which produces an output based on the tags written in the data code.
       # an example being, 'funny', 'simple', 'sit-com'
