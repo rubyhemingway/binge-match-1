@@ -10,14 +10,17 @@ class homepage(homepageTemplate):
 # I learnt how to do that from a tutorial in anvil.
 # the 'form' template is what has been used to format this site.
 # recommended by anvil.
+  # SOURCE: (Ryan, 2025, 'Using Layouts to Create a Multi-Page App')
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('netflixpage')
 
+  # SOURCE: (Ryan, 2025, 'Using Layouts to Create a Multi-Page App')
   def home_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
 
+  # SOURCE: (Ryan, 2025, 'Using Layouts to Create a Multi-Page App')
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('homepage.amazonprimepage')

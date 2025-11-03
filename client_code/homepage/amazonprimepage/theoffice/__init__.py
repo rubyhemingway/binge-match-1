@@ -6,6 +6,7 @@ class theoffice(theofficeTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+  # focuses the us
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.theoffice_reviewbox.focus()
@@ -26,14 +27,17 @@ class theoffice(theofficeTemplate):
       self.theoffice_outputreview.visible = False
 
 #takes the user back to the homepage
+  # SOURCE: (Ryan, 2025, 'Using Layouts to Create a Multi-Page App')
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('homepage')
 
+  # SOURCE: (Ryan, 2025, 'Using Layouts to Create a Multi-Page App')
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('netflixpage')
 
+  # SOURCE: (Ryan, 2025, 'Using Layouts to Create a Multi-Page App')
   def outlined_button_3_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('homepage.amazonprimepage')
