@@ -11,6 +11,7 @@ class amazonprimepage(amazonprimepageTemplate):
     # the following code after the title is telling the code to respond to keywords not the title.
     # used the same method applied to the netflix page, however it took more effort and time because figuring out how to make it respond to keywords took so much research.
      # co-pilot was also needed for this portion (tutor is aware).
+    #
     self.media_data = [
       {"title": "The Office", "type": "show", "tags": ["funny", "comedy", "sit-com"]},
       {"title": "South Park", "type": "show", "tags": ["funny", "comedy"]},
